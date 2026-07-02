@@ -6,6 +6,47 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+/* Start Settings Box */
+.settings-box {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  background-color: #ffffff;
+  width: 200px;
+  z-index: 100;
+  min-height: 100vh;
+  transition: 0.3ms;
+  -webkit-transition: 0.3ms;
+  -moz-transition: 0.3ms;
+  -ms-transition: 0.3ms;
+  -o-transition: 0.3ms;
+}
+.settings-box.open {
+  left: 0;
+}
+.settings-box .toggle-settings {
+  position: absolute;
+  right: -35px;
+  top: 100px;
+  background-color: #fff;
+  padding: 10px 0;
+  width: 35px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -ms-border-radius: 0 5px 5px 0;
+  -o-border-radius: 0 5px 5px 0;
+}
+/* .settings-box .toggle-settings .fa-gear {
+  width: 30px;
+  padding: 8px 0;
+} */
+.settings-box .settigns-option {
+}
+/* End Settings Box */
+
 /* Start Landing Page */
 .landing-page {
   min-height: 100vh;
