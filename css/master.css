@@ -1,10 +1,97 @@
 :root {
-  --main-color: #ff9800;
+  --main-color: #e922ff;
 }
-
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Open Sans", sans-serif;
 }
+
+/* Start Settings Box */
+.settings-box {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  background-color: #ffffff;
+  width: 200px;
+  z-index: 100;
+  min-height: 100vh;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.settings-box.open {
+  left: 0;
+}
+.settings-box .toggle-settings {
+  position: absolute;
+  right: -35px;
+  top: 120px;
+  background-color: var(--main-color);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -ms-border-radius: 0 5px 5px 0;
+  -o-border-radius: 0 5px 5px 0;
+}
+.settings-box .toggle-settings .fa-gear {
+  width: 35px;
+  padding: 10px 0;
+}
+.settings-box .option-box {
+  padding: 10px;
+  text-align: center;
+  background-color: #d3d5dc;
+  margin: 10px;
+}
+.settings-box .option-box h4 {
+  margin: 0;
+  color: #666;
+}
+.settings-box .option-box .colors-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.settings-box .option-box .colors-list li {
+  width: 24px;
+  height: 24px;
+  background-color: #333;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.5;
+  display: inline-block;
+}
+.settings-box .option-box .colors-list li.active {
+  opacity: 1;
+  border: 3px solid #000000;
+}
+.settings-box .option-box .colors-list li:first-child {
+  background-color: #e922ff;
+}
+.settings-box .option-box .colors-list li:nth-child(2) {
+  background-color: #05f0bd;
+}
+.settings-box .option-box .colors-list li:nth-child(3) {
+  background-color: #0245ff;
+}
+.settings-box .option-box .colors-list li:nth-child(4) {
+  background-color: #f67c30;
+}
+.settings-box .option-box .colors-list li:nth-child(5) {
+  background-color: #ff3784;
+}
+
+/* End Settings Box */
 
 /* Start Landing Page */
 .landing-page {
@@ -36,7 +123,13 @@ body {
 .header-area .logo {
   width: 300px;
   padding: 15px;
+  font-size: 20px;
   font-weight: bold;
+  text-shadow:
+    0 0 5px #ffffffb0,
+    0 0 10px rgba(227, 227, 227, 0.379),
+    0 0 20px rgba(234, 233, 234, 0.381),
+    2px 2px 8px rgba(164, 158, 158, 0.612);
 }
 .header-area .links {
   list-style: none;
@@ -82,6 +175,11 @@ body {
 }
 .introduction-text h1 span {
   color: var(--main-color);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
 }
 .introduction-text p {
   line-height: 1.6;
