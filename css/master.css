@@ -263,3 +263,59 @@ body {
   width: 350px;
 }
 /* End About Us */
+/* Start Our Skills */
+.skills {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eee;
+}
+.skills h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 50px;
+  text-align: center;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.skills .skill-box {
+  background-color: #fff;
+  display: flex;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.skills .skill-box .skill-name {
+  font-weight: bold;
+  width: 140px;
+  text-align: center;
+  line-height: 30px;
+}
+.skills .skill-box .skill-progress {
+  height: 30px;
+  width: calc(100% - 110px);
+  background-color: #f6f6f6;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.skills .skill-box .skill-progress span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+/* End Our Skills */
