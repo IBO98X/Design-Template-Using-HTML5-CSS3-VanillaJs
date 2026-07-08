@@ -257,8 +257,9 @@ body {
 }
 .about-us .image-box {
   flex: 1;
+  text-align: center;
 }
 .about-us .image-box img {
-  width: 250px;
+  width: 350px;
 }
 /* End About Us */
