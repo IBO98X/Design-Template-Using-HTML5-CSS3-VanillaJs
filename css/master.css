@@ -1,5 +1,7 @@
 :root {
   --main-color: #e922ff;
+  --main-transition: 0.3s;
+  --secondary-transtion: 0.7s;
 }
 * {
   box-sizing: border-box;
@@ -11,17 +13,17 @@ body {
 /* Start Settings Box */
 .settings-box {
   position: fixed;
-  left: -200px;
+  left: -250px;
   top: 0;
   background-color: #ffffff;
-  width: 200px;
+  width: 250px;
   z-index: 100;
   min-height: 100vh;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
 }
 .settings-box.open {
   left: 0;
@@ -38,6 +40,11 @@ body {
   -moz-border-radius: 0 5px 5px 0;
   -ms-border-radius: 0 5px 5px 0;
   -o-border-radius: 0 5px 5px 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
 }
 .settings-box .toggle-settings .fa-gear {
   width: 35px;
@@ -70,6 +77,11 @@ body {
   cursor: pointer;
   opacity: 0.5;
   display: inline-block;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
 }
 .settings-box .option-box .colors-list li.active {
   opacity: 1;
@@ -90,7 +102,37 @@ body {
 .settings-box .option-box .colors-list li:nth-child(5) {
   background-color: #ff3784;
 }
-
+.settings-box .random-backgrounds .yes,
+.settings-box .random-backgrounds .no {
+  width: 50px;
+  background-color: #009688;
+  color: #fff;
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  font-weight: bold;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.settings-box .random-backgrounds span.active {
+  opacity: 1;
+}
+.settings-box .random-backgrounds .yes {
+  background-color: #009688;
+}
+.settings-box .random-backgrounds .no {
+}
 /* End Settings Box */
 
 /* Start Landing Page */
@@ -98,11 +140,11 @@ body {
   min-height: 100vh;
   background-image: url("../imgs/Landing2.jpg");
   background-size: cover;
-  transition: 0.7s;
-  -webkit-transition: 0.7s;
-  -moz-transition: 0.7s;
-  -ms-transition: 0.7s;
-  -o-transition: 0.7s;
+  transition: var(--secondary-transtion);
+  -webkit-transition: var(--secondary-transtion);
+  -moz-transition: var(--secondary-transtion);
+  -ms-transition: var(--secondary-transtion);
+  -o-transition: var(--secondary-transtion);
 }
 .landing-page .overlay {
   background-color: rgba(0, 0, 0, 0.6);
@@ -146,11 +188,11 @@ body {
 .header-area .links li a {
   color: #fff;
   text-decoration: none;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
 }
 .header-area .links li a:hover,
 .header-area .links li a.active {
@@ -175,11 +217,11 @@ body {
 }
 .introduction-text h1 span {
   color: var(--main-color);
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
 }
 .introduction-text p {
   line-height: 1.6;
