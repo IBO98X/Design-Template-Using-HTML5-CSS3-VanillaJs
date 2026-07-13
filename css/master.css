@@ -29,6 +29,7 @@ body {
   -moz-transition: var(--main-transition);
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
+  border: 2px solid #eee;
 }
 .settings-box.open {
   left: 0;
@@ -37,7 +38,7 @@ body {
   position: absolute;
   right: -35px;
   top: 120px;
-  background-color: var(--main-color);
+  background-color: #777;
   text-align: center;
   cursor: pointer;
   border-radius: 0 5px 5px 0;
@@ -107,8 +108,8 @@ body {
 .settings-box .option-box .colors-list li:nth-child(5) {
   background-color: #ff3784;
 }
-.settings-box .random-backgrounds .yes,
-.settings-box .random-backgrounds .no {
+.settings-box .option-box .yes,
+.settings-box .option-box .no {
   width: 50px;
   background-color: #009688;
   color: #fff;
@@ -130,13 +131,70 @@ body {
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
 }
-.settings-box .random-backgrounds span.active {
+.settings-box .option-box span.active {
   opacity: 1;
 }
-.settings-box .random-backgrounds .yes {
-  background-color: #009688;
-}
 /* End Settings Box */
+
+/* Start Navigation Bullets */
+.nav-bullets {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  width: 40px;
+  z-index: 1000;
+}
+.nav-bullets .bullet {
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--main-color);
+  margin: 20px auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+.nav-bullets .bullet:hover .tooltip {
+  display: block;
+}
+.nav-bullets .bullet .tooltip {
+  background-color: var(--main-color);
+  width: 120px;
+  color: #fff;
+  padding: 8px 10px;
+  position: absolute;
+  right: 32px;
+  top: -10px;
+  text-align: center;
+  display: none;
+}
+.nav-bullets .bullet .tooltip::before {
+  content: "";
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent var(--main-color);
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: -19px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  cursor: default;
+  pointer-events: none;
+}
+/* End Navigation Bullets */
 
 /* Start Landing Page */
 .landing-page {
@@ -232,6 +290,7 @@ body {
   margin: 0;
 }
 /* End Landing Page */
+
 /* Start About Us */
 .about-us {
   padding-top: 50px;
@@ -261,6 +320,7 @@ body {
   width: 350px;
 }
 /* End About Us */
+
 /* Start Our Skills */
 .skills {
   padding-top: 50px;
@@ -317,6 +377,7 @@ body {
   -o-transition: var(--main-transition);
 }
 /* End Our Skills */
+
 /* Start Gallery */
 .gallery {
   padding-top: 50px;
@@ -407,6 +468,7 @@ body {
   line-height: 30px;
 }
 /* End Gallery */
+
 /* Start Timeline */
 .timeline {
   padding-top: 50px;
@@ -515,6 +577,7 @@ body {
   top: 20px;
 }
 /* End Timeline */
+
 /* Start Our Features Section */
 .features {
   padding-top: 80px;
@@ -563,6 +626,7 @@ body {
   color: #706f6f;
 }
 /* End Our Features Section */
+
 /* Start Testimonilas Section */
 .testimonials {
   position: relative;
@@ -575,7 +639,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #333;
+  background-color: var(--main-color);
   height: 100%;
   transition: var(--main-transition);
   -webkit-transition: var(--main-transition);
@@ -590,8 +654,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  background-color: var(--main-color);
-
+  background-color: #707070;
   height: 100%;
 }
 .testimonials h2 {
