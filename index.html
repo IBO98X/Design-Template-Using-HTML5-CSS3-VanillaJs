@@ -38,10 +38,38 @@
             <span class="no" data-background="no">No</span>
           </div>
         </div>
+        <div class="option-box">
+          <h4>Show Bullets</h4>
+          <div class="bullets-option">
+            <span class="yes active" data-display="show">Yes</span>
+            <span class="no" data-display="hide">No</span>
+          </div>
+        </div>
       </div>
     </div>
     <!-- End Setting Box -->
-
+    <!-- Start Navigation Bullets -->
+    <div class="nav-bullets">
+      <div class="bullet" data-section=".about-us">
+        <div class="tooltip">About Us</div>
+      </div>
+      <div class="bullet" data-section=".skills">
+        <div class="tooltip">Our Skills</div>
+      </div>
+      <div class="bullet" data-section=".gallery">
+        <div class="tooltip">Our Gallery</div>
+      </div>
+      <div class="bullet" data-section=".timeline">
+        <div class="tooltip">Timeline</div>
+      </div>
+      <div class="bullet" data-section=".features">
+        <div class="tooltip">Features</div>
+      </div>
+      <div class="bullet" data-section=".testimonials">
+        <div class="tooltip">Testimonials</div>
+      </div>
+    </div>
+    <!-- End Navigation Bullets -->
     <!-- Start Landing Page -->
     <div class="landing-page">
       <div class="overlay"></div>
@@ -49,10 +77,12 @@
         <div class="header-area">
           <div class="logo">UNIVERSE</div>
           <ul class="links">
-            <li><a href="#" class="active">About</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" data-section=".about-us">About</a></li>
+            <li><a href="#" data-section=".skills">Skills</a></li>
+            <li><a href="#" data-section=".gallery">Gallery</a></li>
+            <li><a href="#" data-section=".timeline">Timeline</a></li>
+            <li><a href="#" data-section=".features">Features</a></li>
+            <li><a href="#" data-section=".testimonials">Testimonials</a></li>
           </ul>
         </div>
       </div>
@@ -247,7 +277,6 @@
     </div>
     <!-- End Our Features Section-->
     <!-- Start Testimonials Section-->
-
     <div class="testimonials">
       <div class="container">
         <h2>Testimonials</h2>
