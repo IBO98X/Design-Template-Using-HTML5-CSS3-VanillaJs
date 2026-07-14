@@ -816,16 +816,41 @@ body {
   opacity: 0;
   transition: 0.3s;
 }
-
 .contact form textarea:focus:-ms-input-placeholder,
 .contact form input:not([type="submit"]):focus:-ms-input-placeholder {
   opacity: 0;
   transition: 0.3s;
 }
-
 .contact form textarea:focus::placeholder,
 .contact form input:not([type="submit"]):focus::placeholder {
   opacity: 0;
   transition: 0.3s;
 }
 /* End Contact Us Section */
+
+/* Start Grid System */
+/* Small Devices */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+/* Medium Devices */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+/* Desktops */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+/* Large Screen */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+/* End Grid System */
