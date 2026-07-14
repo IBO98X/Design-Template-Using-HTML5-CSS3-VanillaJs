@@ -278,3 +278,13 @@ bulletsSpan.forEach((span) => {
     handleActive(e);
   });
 });
+
+// Reset Settings Button
+document.querySelector(".reset-options").onclick = function () {
+  // Remove Specific Local Storage Items
+  localStorage.removeItem("bullet_option");
+  localStorage.removeItem("color_option");
+  localStorage.removeItem("background_option");
+  // Reload Page
+  window.location.reload();
+};
