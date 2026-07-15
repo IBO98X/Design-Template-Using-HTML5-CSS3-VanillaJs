@@ -288,3 +288,34 @@ document.querySelector(".reset-options").onclick = function () {
   // Reload Page
   window.location.reload();
 };
+
+// Toggle Menu
+let toggleButton = document.querySelector(".toggle-menu");
+let links = document.querySelector(".links");
+
+toggleButton.onclick = function (e) {
+  // Stop Propagation
+  e.stopPropagation();
+  // Toggle Class "menu-active" On Button
+  this.classList.toggle("menu-active");
+  // Toggle Class "open" On Links
+  links.classList.toggle("open");
+};
+
+// Click Anywhere Outside Menu And Toggle Button
+document.addEventListener("click", (e) => {
+  if (e.target !== toggleButton && e.target !== links) {
+    // Check If Menu Is Open
+    if (links.classList.contains("open")) {
+      // Toggle Class "menu-active" On Button
+      toggleButton.classList.toggle("menu-active");
+      // Toggle Class "open" On Links
+      links.classList.toggle("open");
+    }
+  }
+});
+
+// Stop Propagation On Menu
+links.onclick = function (e) {
+  e.stopPropagation();
+};
