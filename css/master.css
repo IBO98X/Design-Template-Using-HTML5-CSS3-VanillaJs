@@ -10,7 +10,6 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 .container {
-  width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
   margin: auto;
@@ -268,13 +267,15 @@ body {
     0 0 20px rgba(234, 233, 234, 0.381),
     2px 2px 8px rgba(164, 158, 158, 0.612);
 }
+.header-area .links-container {
+  width: 100%;
+  text-align: right;
+}
 .header-area .links {
   list-style: none;
   padding-left: 0;
-  padding-right: 20px;
   width: 100%;
   text-align: right;
-  font-size: 15px;
 }
 .header-area .links li {
   display: inline-block;
@@ -292,6 +293,38 @@ body {
 .header-area .links li a:hover,
 .header-area .links li a.active {
   color: var(--main-color);
+}
+.header-area .toggle-menu {
+  background: none;
+  border: none;
+  width: 40px;
+  cursor: pointer;
+  margin-top: 15px;
+  display: none;
+  position: relative;
+}
+.header-area .toggle-menu.menu-active::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  bottom: -15px;
+  left: 10px;
+}
+.header-area .toggle-menu:focus {
+  outline: none;
+}
+.header-area .toggle-menu span {
+  display: block;
+  background-color: #fff;
+  height: 4px;
+  margin-bottom: 4px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 .introduction-text {
   position: absolute;
@@ -322,6 +355,37 @@ body {
   line-height: 1.6;
   font-size: 20px;
   margin: 0;
+}
+@media (max-width: 991px) {
+  .header-area .links {
+    display: none;
+  }
+  .header-area .links.open {
+    background-color: #fff;
+    padding: 10px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    text-align: left;
+  }
+  .header-area .links.open li {
+    display: block;
+    margin: 10px;
+  }
+  .header-area .links.open li a {
+    color: var(--main-color);
+    font-weight: bold;
+  }
+  .header-area .toggle-menu {
+    display: inline-block;
+  }
 }
 /* End Landing Page */
 
